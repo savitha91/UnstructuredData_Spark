@@ -1,5 +1,5 @@
 # UnstructuredData_Spark
-Cleaning unstructured data using SPARK RDD and creating Dataframe for further analysis
+Cleaning unstructured data(.dat) using SPARK RDD,creating Dataframe, storing the results in HIVE 
 
 ### Dataset
 Movies dataset stored in .dat file - movies.dat
@@ -9,12 +9,12 @@ Movies dataset stored in .dat file - movies.dat
 #### Unstructured Data -> HDFS  -> HIVE External table -> RDBMS
 
 1. Given unstructured input dataset. 
-2. Clean the dataset using RDD and create Dataframe. Apply necessary transformation
-3. Store the cleaned data in Hadoop distributed file system parquet format
-4. Create external HIVE table using the data
-5. Using SQOOP , export the data to RDBMS table
+2. Clean the dataset using RDD and create spark dataframe. Apply necessary transformations
+3. Store the contents of spark dataframe to file in parquet format or create temptable using spark dataframe
+4. Create HIVE(managed/external) table from parquet file or directly from the temptable
+5. Using SQOOP , export the data from Hive-table/HDFS-parquet-file to RDBMS table  - ISSUE: exporting parquet file using SQOOP throws error
 
 ### Files used in the project
-1. project.py : This file has the code for cleaning the dataset using RDD,creating Spark Dataframe, storing data in HDFS,creating HIVE external table and sqoop                     export command
+1. main.py : This file has the code for cleaning the dataset using RDD,creating Spark Dataframe, storing data in HDFS,creating HIVE table (and sqoop                    export command)
 2. utilFunc.py : This is the supporting file which has functions for data cleaning, which are used in the project.py 
 3. submitCommand.txt:  This file has the spark-submit command

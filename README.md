@@ -20,8 +20,8 @@ Movies dataset stored in .dat file - movies.dat
 3. submitCommand.txt:  This file has the spark-submit command
 
 ### Steps to execute
-1.Start hive server (hive --service metastore &)
-2.Modify the paths of movie.dat,parquet file location in the main.py
-3.Download main.py, utilFunc.py and submitCommand.txt
-4.In the VM where Hadoop environment is setup, execute the spark-submit command present in submitCommand.txt
-5.In the hive CLI, execute "select * from moviesTable", to check the preprocessed movies dataset
+1. Start hive server (hive --service metastore &)
+2. Modify the paths of movie.dat,parquet file location in the main.py
+3. Download main.py, utilFunc.py and submitCommand.txt
+4. In the VM where Hadoop environment is setup, execute the spark-submit command present in submitCommand.txt
+5. In the hive CLI, execute "select * from moviesTable", to check the preprocessed movies dataset

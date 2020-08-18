@@ -6,7 +6,7 @@ Movies dataset stored in .dat file - movies.dat
 
 ### Project Goal
 
-#### Unstructured Data -> HDFS  -> HIVE External table -> RDBMS
+#### Unstructured Data(.dat file) -> Pre-process(clean) data -> Store data in HDFS -> Store data in HIVE table -> Store data in RDBMS
 
 1. Given unstructured input dataset. 
 2. Clean the dataset using RDD and create spark dataframe. Apply necessary transformations
@@ -23,5 +23,7 @@ Movies dataset stored in .dat file - movies.dat
 1. Start hive server (hive --service metastore &)
 2. Modify the paths of movie.dat,parquet file location in the main.py
 3. Download main.py, utilFunc.py and submitCommand.txt
-4. In the VM where Hadoop environment is setup, execute the spark-submit command present in submitCommand.txt
+4. In the VM where Hadoop environment is setup, execute the spark-submit command present in submitCommand.txt. Here, Spark is execute in local mode
 5. In the hive CLI, execute "select * from moviesTable", to check the preprocessed movies dataset
+
+##### TODO : SQOOP export command issues to be fixed

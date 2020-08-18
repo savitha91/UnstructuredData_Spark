@@ -1,0 +1,5 @@
+spark-submit --master local[*] --py-files /utilFunc.py /main.py
+
+
+
+
